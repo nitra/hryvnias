@@ -15,18 +15,18 @@ $ npm i --save hryvnias
 #### Як використовувати
 
 ```js
-var rubles = require("hryvnias").rubles;
+var hryvnias = require('hryvnias').rubles
 
 // Якщо ми хочемо просто отримати число прописом
-var text = rubles(52151, true);
-console.log(text); // п'ятдесят дві тисячі сто п'ятдесят один
+var text = hryvnias(52151, true)
+console.log(text) // п'ятдесят дві тисячі сто п'ятдесят один
 
 // А якщо з грошами
-var text = rubles(12.1);
-console.log(text); // двенадцать рублей 10 копеек
+var text = hryvnias(12.1)
+console.log(text) // двенадцать рублей 10 копеек
 
-var text = rubles("52151,31");
-console.log(text); // п'ятдесят дві тисячі сто п'ятдесят один гривня 31 копійка
+var text = hryvnias('52151,31')
+console.log(text) // п'ятдесят дві тисячі сто п'ятдесят один гривня 31 копійка
 ```
 
 ---
@@ -49,11 +49,11 @@ $ bower install hryvnias --save
 
 ```html
 <script>
-  var text = rubles(12.1);
-  console.log(text); // дванадцять гривень 10 копійок
+  var text = rubles(12.1)
+  console.log(text) // дванадцять гривень 10 копійок
 
-  var text = rubles("52151,31");
-  console.log(text); // п'ятдесят дві тисячі сто п'ятдесят один гривня 31 копійка
+  var text = rubles('52151,31')
+  console.log(text) // п'ятдесят дві тисячі сто п'ятдесят один гривня 31 копійка
 </script>
 ```
 
