@@ -1,9 +1,9 @@
 {
-  "name": "rubles",
-  "version": "0.2.0",
+  "name": "hryvnias",
+  "version": "0.1.1",
   "author": "Alexey Simonenko <alexey@simonenko.su>",
   "homepage": "http://simonenko.su/projects/rubles",
-  "main": "./lib/rubles.min.js",
+  "main": "./lib/hryvnias.min.js",
   "ignore": [
     ".editorconfig",
     ".eslintrc",

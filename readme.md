@@ -1,87 +1,68 @@
-# rubles.js — стоимость прописью
+# hryvnias.js — Вартість прописом
 
-[![NPM version][npm-image]][npm-url]
-[![Build status][travis-image]][travis-url]
-[![Test coverage][coveralls-image]][coveralls-url]
-[![devDependency status][devdependency-image]][devdependency-url]
+Форк корисного пакету [rubles](//www.npmjs.com/package/rubles)
 
-В российском документообороте принято писать сумму прописью. Такое должно быть в договорах, актах, расписках и других подобных документах. Rubles.js призван решить эту проблему комплексно, он работает в браузере и на серверной стороне.
+В українському документообігу прийнято писати суму літерами. Таке повинно бути в договорах, актах, розписках та інших подібних документах. hryvnias.js покликаний вирішити цю проблему комплексно, він працює в браузері і на стороні сервера.
 
-### На сервере
+### На сервері
 
-#### Установить через [npm](//npmjs.org)
+#### Встановити через [npm](//npmjs.org)
 
 ```bash
-$ npm i --save rubles
+$ npm i --save hryvnias
 ```
 
-#### Как использовать
+#### Як використовувати
 
 ```js
-var rubles = require('rubles').rubles;
+var rubles = require("hryvnias").rubles;
 
-var text = rubles(12.10);
+// Якщо ми хочемо просто отримати число прописом
+var text = rubles(52151, true);
+console.log(text); // п'ятдесят дві тисячі сто п'ятдесят один
+
+// А якщо з грошами
+var text = rubles(12.1);
 console.log(text); // двенадцать рублей 10 копеек
 
 var text = rubles("52151,31");
-console.log(text); // пятьдесят две тысячи сто пятьдесят один рубль 31 копейка
+console.log(text); // п'ятдесят дві тисячі сто п'ятдесят один гривня 31 копійка
 ```
 
-----------------
+---
 
-### В браузере
+### В браузері
 
-#### Установить через [bower](http://bower.io)
+#### Встановити через [bower](http://bower.io)
 
 ```bash
-$ bower install rubles --save
+$ bower install hryvnias --save
 ```
 
-#### Подключить
+#### Як підключити
 
 ```html
-<script src="bower_components/rubles/lib/rubles.min.js"></script>
+<script src="bower_components/hryvnias/lib/hryvnias.min.js"></script>
 ```
 
-#### Использовать
+#### Як використовувати
 
 ```html
 <script>
-var text = rubles(12.10);
-console.log(text); // двенадцать рублей 10 копеек
+  var text = rubles(12.1);
+  console.log(text); // дванадцять гривень 10 копійок
 
-var text = rubles("52151,31");
-console.log(text); // пятьдесят две тысячи сто пятьдесят один рубль 31 копейка
+  var text = rubles("52151,31");
+  console.log(text); // п'ятдесят дві тисячі сто п'ятдесят один гривня 31 копійка
 </script>
 ```
 
-----------------
-
-### Нашли ошибку?
-
-Пожалуйста, создайте тикет — https://github.com/meritt/rubles/issues
-
-### Тестирование
-
-Для запуска тестов обновите репозиторий и запустите:
-
-```bash
-$ npm test
-```
+---
 
 ## Автор
 
-* [Алексей Симоненко](mailto:alexey@simonenko.su), [simonenko.su](http://simonenko.su)
+- [Олексій Симоненко](mailto:alexey@simonenko.su), [simonenko.su](http://simonenko.su)
 
-## Лицензия
+## Ліцензія
 
-Лицензия MIT, смотрите файл `license.md`.
-
-[npm-image]: https://img.shields.io/npm/v/rubles.svg?style=flat
-[npm-url]: https://www.npmjs.com/package/rubles
-[travis-image]: https://travis-ci.org/meritt/rubles.svg?branch=master
-[travis-url]: https://travis-ci.org/meritt/rubles
-[coveralls-image]: https://coveralls.io/repos/meritt/rubles/badge.svg?branch=master&service=github
-[coveralls-url]: https://coveralls.io/github/meritt/rubles?branch=master
-[devdependency-image]: https://img.shields.io/david/dev/meritt/rubles.svg?style=flat
-[devdependency-url]: https://david-dm.org/meritt/rubles#info=devDependencies
+Ліцензія MIT, дивіться файл `license.md`.

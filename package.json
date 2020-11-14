@@ -1,9 +1,10 @@
 {
-  "name": "rubles",
-  "version": "0.2.0",
-  "description": "Стоимость прописью",
+  "name": "hryvnias",
+  "version": "0.1.1",
+  "description": "Вартість прописом",
   "keywords": [
     "ruble",
+    "hryvnias",
     "numeral"
   ],
   "author": "Alexey Simonenko <alexey@simonenko.su>",
@@ -11,10 +12,11 @@
   "main": "./lib/rubles",
   "repository": {
     "type": "git",
-    "url": "https://github.com/meritt/rubles.git"
+    "url": "https://github.com/nitra/hryvnias.git"
   },
+  "prettier": "prettier-config-standard",
   "scripts": {
-    "build": "uglifyjs lib/rubles.js -o lib/rubles.min.js -m -c",
+    "build": "npx terser lib/rubles.js -o lib/hryvnias.min.js -m -c",
     "mocha": "mocha --reporter dot",
     "lint": "eslint lib/rubles.js test/test.js",
     "lib-cov": "istanbul instrument --output lib-cov --no-compact --variable global.__coverage__ lib",
@@ -30,8 +32,8 @@
     "istanbul": "^0.3.19",
     "mocha": "^2.3.2",
     "mocha-istanbul": "^0.2.0",
-    "should": "^7.1.0",
-    "uglify-js": "^2.4.24"
+    "prettier-config-standard": "^1.0.1",
+    "should": "^7.1.0"
   },
   "engines": {
     "node": "^0.12.7"
